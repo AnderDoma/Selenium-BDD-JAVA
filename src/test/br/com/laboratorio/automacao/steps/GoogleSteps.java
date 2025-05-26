@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import br.com.laboratorio.automacao.utils.Utils;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -14,6 +15,7 @@ import cucumber.api.java.en.When;
 public class GoogleSteps extends Base{
 	
 	WebDriver driver = Base.getDriver();
+	Utils utils = new Utils(Base.getDriver());
 
 		
 	@Given("acesso a pagina do google")
@@ -25,8 +27,9 @@ public class GoogleSteps extends Base{
 	public void realizao_uma_pesquisa(String valorPesquisa) throws Throwable {
 		WebElement barra_pesquisa = driver.findElement(By.xpath("//*[@id=\"APjFqb\"]"));
 		barra_pesquisa.sendKeys(valorPesquisa);
+		utils.waitPageLoad(2);
 		barra_pesquisa.sendKeys(Keys.ENTER);
-		
+		utils.waitPageLoad(2);
 	}
 
 	@Then("^valido o resultado da pesquisa$")

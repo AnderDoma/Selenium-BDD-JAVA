@@ -1,7 +1,10 @@
 package br.com.laboratorio.automacao.runners;
 
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
 
+import br.com.laboratorio.automacao.steps.Base;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
@@ -16,6 +19,18 @@ import cucumber.api.junit.Cucumber;
 		tags = {"~@ignore"}	
 		)
 	
-public class GoogleRunner {
+public class GoogleRunner extends Base {
+	@AfterClass
+	public static void tearDown() {
+		try {
+			WebDriver driver = Base.getDriver();
+			if (driver != null) {
+				driver.quit(); // or driver.close();
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }

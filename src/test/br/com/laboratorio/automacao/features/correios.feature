@@ -1,4 +1,4 @@
-#encoding: iso-8859-1
+#encoding: utf-8
 @002_Correios
 Feature: 002_Correios
 

@@ -22,7 +22,7 @@ public class DriverFactory {
 		try {
 			System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
 			DriverFactory.driver = new ChromeDriver();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
 		} catch (Exception e) {
 			System.out.println("Erro ao abrir o driver");
 		}
