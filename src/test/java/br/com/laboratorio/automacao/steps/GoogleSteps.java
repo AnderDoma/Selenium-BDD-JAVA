@@ -8,11 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import br.com.laboratorio.automacao.utils.Utils;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
-public class GoogleSteps extends Base{
+public class GoogleSteps extends Base {
 	
 	WebDriver driver = Base.getDriver();
 	Utils utils = new Utils(Base.getDriver());
@@ -23,7 +23,7 @@ public class GoogleSteps extends Base{
 		driver.get("http://www.google.com");
 	}
 
-	@When("^realizao uma pesquisa \"([^\"]*)\"$")
+	@When("^realizo uma pesquisa \"([^\"]*)\"$")
 	public void realizao_uma_pesquisa(String valorPesquisa) throws Throwable {
 		WebElement barra_pesquisa = driver.findElement(By.xpath("//*[@id=\"APjFqb\"]"));
 		barra_pesquisa.sendKeys(valorPesquisa);

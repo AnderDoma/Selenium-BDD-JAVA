@@ -3,8 +3,8 @@ package br.com.laboratorio.automacao.steps;
 import org.openqa.selenium.WebDriver;
 
 import br.com.laboratorio.automacao.driver.DriverFactory;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 
 public class BaseTest extends Base {
 	

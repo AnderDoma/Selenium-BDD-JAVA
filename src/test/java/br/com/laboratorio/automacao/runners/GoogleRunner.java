@@ -1,12 +1,13 @@
 package br.com.laboratorio.automacao.runners;
 
+import br.com.laboratorio.automacao.steps.Base;
+
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import br.com.laboratorio.automacao.steps.Base;
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions (
@@ -14,9 +15,9 @@ import cucumber.api.junit.Cucumber;
 		plugin = { "pretty", "html:target/cucumber-report",
 				"json:target/reports/CucumberReport.json"},
 		features = {
-				"src/test/br/com/laboratorio/automacao/features/google.feature"},
-		glue = { "br.com.laboratorio.automacao.steps", "br.com.laboratorio.automacao.utils" },
-		tags = {"~@ignore"}	
+				"src/test/java/br/com/laboratorio/automacao/features/google.feature"},
+		glue = { "br.com.laboratorio.automacao.steps", "br.com.laboratorio.automacao.utils" }
+		/*tags = {"~@ignore"}	*/
 		)
 	
 public class GoogleRunner extends Base {

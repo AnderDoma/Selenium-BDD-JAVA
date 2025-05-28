@@ -3,16 +3,17 @@ package br.com.laboratorio.automacao.steps;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import br.com.laboratorio.automacao.pages.CorreiosPage;
+
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import br.com.laboratorio.automacao.pages.CorreiosPage;
 import br.com.laboratorio.automacao.utils.Utils;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class CorreiosSteps extends Base {
 	
